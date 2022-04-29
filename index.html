@@ -17,20 +17,8 @@
             font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
                sans-serif;
             font-size: 50px;
-            position: fixed;
-            top: 45%;
-            transform: translate(-50%, -50%);
-         }
-         p:first-of-type {
-            left: 35%;
-         }
-         p:last-of-type {
-            left: 65%;
          }
          .switch {
-            position: fixed;
-            top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
             display: inline-block;
             width: 70px;
@@ -53,7 +41,7 @@
             background-color: #ccc;
             -webkit-transition: 0.4s;
             transition: 0.4s;
-            transform: scale(5);
+            transform: scale(4);
          }
 
          .slider:before {
@@ -86,17 +74,39 @@
          .slider.round:before {
             border-radius: 50%;
          }
+         #box {
+            display: flex;
+            justify-content: center;
+         }
+         #schalter {
+            transform: translate(50%, 50%);
+            margin: 10px;
+            width: 317px;
+         }
+         @media only screen and (max-width: 600px) {
+            h1 {
+               font-size: 60px;
+            }
+            .slider {
+               transform: scale(2.5);
+            }
+         }
       </style>
    </head>
 
    <body>
       <h1>Depression Mode</h1>
-      <p>Off</p>
-      <p>On</p>
-      <label class="switch">
-         <input type="checkbox" id="checkbox" />
-         <span class="slider round" onclick="save()"></span>
-      </label>
+      <div id="box">
+         <p>Off</p>
+         <div id="schalter">
+            <label class="switch">
+               <input type="checkbox" id="checkbox" />
+               <span class="slider round" onclick="save()"></span>
+            </label>
+         </div>
+         <p>On</p>
+      </div>
+
       <script>
          var cookie = document.cookie.slice(8, -15);
 
