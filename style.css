@@ -85,3 +85,12 @@ input:checked + .slider:before {
       height: 85px;
    }
 }
+@media (prefers-color-scheme: dark) {
+   body {
+      background-color: #181a1b;
+   }
+   h1,
+   p {
+      color: white;
+   }
+}
