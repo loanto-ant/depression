@@ -48,3 +48,13 @@ function save() {
       ", SameSite=None; Secure; expires=So, 01 Apr 2023 00:00:00 UTC";
    console.log("document.cookie = " + document.cookie);
 }
+
+//Stats
+//Anzeigen wenn Button klicked
+function showstats() {
+   if (document.getElementById("stats").style.display == "block") {
+      document.getElementById("stats").style.display = "none";
+   } else {
+      document.getElementById("stats").style.display = "block";
+   }
+}

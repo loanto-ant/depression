@@ -1,11 +1,12 @@
+* {
+   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
 h1 {
    text-align: center;
    margin-top: 150px;
    font-size: 100px;
-   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-p {
-   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+#box p {
    font-size: 50px;
 }
 .switch {
@@ -85,12 +86,48 @@ input:checked + .slider:before {
       height: 85px;
    }
 }
+
+button {
+   font-size: 30px;
+   border-radius: 50%;
+   width: 70px;
+   height: 70px;
+   border: none;
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+}
+
+#stats {
+   background-color: #c1c7c9;
+   border-radius: 10px;
+   padding: 10px;
+   position: absolute;
+   left: 50%;
+   top: 60%;
+   transform: translate(-50%);
+   width: 90vw;
+   display: none;
+}
+#stats h2 {
+   font-size: 40px;
+   margin: 0 0 5px 0;
+}
+#stats p {
+   font-size: 25px;
+   margin: 0px;
+}
+
 @media (prefers-color-scheme: dark) {
    body {
       background-color: #181a1b;
    }
    h1,
-   p {
+   p,
+   h2 {
       color: white;
+   }
+   #stats {
+      background-color: rgb(102, 102, 102);
    }
 }
