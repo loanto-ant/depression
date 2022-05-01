@@ -97,18 +97,24 @@ button {
    right: 50px;
    bottom: 50px;
 }
-
-#stats {
+.stats {
+   opacity: 0;
+   transition: opacity 0.5s, transform 0.5s;
    background-color: #c1c7c9;
    border-radius: 10px;
    padding: 10px;
    position: absolute;
    left: 50%;
    top: 60%;
-   transform: translate(-50%);
+   transform: translate(-50%, 30px);
    width: 90vw;
-   display: none;
 }
+.stats_show_hide {
+   display: block;
+   opacity: 1;
+   transform: translate(-50%, 0px);
+}
+
 #stats h2 {
    font-size: 40px;
    margin: 0 0 5px 0;

@@ -52,9 +52,5 @@ function save() {
 //Stats
 //Anzeigen wenn Button klicked
 function showstats() {
-   if (document.getElementById("stats").style.display == "block") {
-      document.getElementById("stats").style.display = "none";
-   } else {
-      document.getElementById("stats").style.display = "block";
-   }
+   document.getElementById("stats").classList.toggle("stats_show_hide");
 }
