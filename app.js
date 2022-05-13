@@ -73,7 +73,6 @@ function zeit() {
    var cookie = document.cookie.split(";");
    let cookie_neu2 = cookie[1];
    cookie_neu2 = cookie_neu2.match(/\d+/);
-   console.log(cookie_neu2[0]);
 
    //Jetzt-Zeit herausfinden und differenz bilden
    var jetzt = new Date();
@@ -102,10 +101,9 @@ function zeit() {
    if (s == 1) s = s + " second. ";
    else s = s + " seconds. ";
 
-   console.log(checked);
    if (checked == true) var output_text = "You have been depressed for ";
    if (checked == false) var output_text = "You have been depression free for ";
 
    document.getElementById("stats_output").innerHTML =
-      output_text + tage_g + st + m + " minutes and " + s + " seconds.";
+      output_text + tage_g + st + m + s;
 }
