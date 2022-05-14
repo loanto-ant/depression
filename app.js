@@ -32,6 +32,9 @@ switch (cookie_neu) {
 }
 document.getElementById("checkbox").checked = cookie;
 
+//checked definieren
+checked = 3;
+
 //Aktuellen Wert speichern
 function save() {
    checked = document.getElementById("checkbox").checked;
@@ -70,13 +73,13 @@ function showstats() {
 
 function zeit() {
    //Wert der im cookie gespeicherten Zeit herausfinden
-   var cookie = document.cookie.split(";");
-   let cookie_neu2 = cookie[1];
-   cookie_neu2 = cookie_neu2.match(/\d+/);
+   var cookie_time = document.cookie.split(";");
+   let cookie_time2 = cookie_time[1];
+   cookie_time2 = cookie_time2.match(/\d+/);
 
    //Jetzt-Zeit herausfinden und differenz bilden
    var jetzt = new Date();
-   var differenz = jetzt.getTime() - cookie_neu2;
+   var differenz = jetzt.getTime() - cookie_time2;
 
    var sekunden_g = Math.floor(differenz / 1000);
    var s = sekunden_g % 60;
@@ -101,8 +104,12 @@ function zeit() {
    if (s == 1) s = s + " second. ";
    else s = s + " seconds. ";
 
+   //Text an aktuellen wert (Depressed/nicht depressed) anpassen. Wenn checkt nicht verfügbar wird cookie verwendet;
    if (checked == true) var output_text = "You have been depressed for ";
    if (checked == false) var output_text = "You have been depression free for ";
+   else if (cookie == true) var output_text = "You have been depressed for ";
+   else if (cookie == false)
+      var output_text = "You have been depression free for ";
 
    document.getElementById("stats_output").innerHTML =
       output_text + tage_g + st + m + s;
