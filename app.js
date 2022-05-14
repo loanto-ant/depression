@@ -60,8 +60,6 @@ function save() {
       "time=" +
       zeit +
       ", SameSite=None; Secure; expires=So, 01 Apr 2023 00:00:00 UTC";
-
-   //console.log("document.cookie = " + document.cookie);
 }
 
 //Stats
